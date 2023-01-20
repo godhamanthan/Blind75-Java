@@ -1,3 +1,4 @@
+// runtime 1 ms
 class Solution {
     public int maxSubArray(int[] nums) {
     int currMaxSum = nums[0];
