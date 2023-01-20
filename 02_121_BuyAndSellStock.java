@@ -1,4 +1,25 @@
-// using for loop and runtime 2 ms
+// runtime 1 ms
+
+class Solution
+ {
+    public int maxProfit(int[] prices)
+     {
+        int maxprofit=0;  
+        int minvalue = prices[0];
+        for(int i=0;i<prices.length;i++)
+        {
+            minvalue = Math.min(minvalue,prices[i]);
+            int profit = prices[i] - minvalue;
+            maxprofit = Math.max(profit,maxprofit);
+        }
+
+        return maxprofit;
+    }
+}
+
+
+// runtime 2 ms
+
 class Solution{
     public int maxProfit(int[]prices){
         int minval = Integer.MAX_VALUE;
@@ -14,7 +35,9 @@ class Solution{
     }
 }
 
+
 // using dp
+
 class Solution {
     public int maxProfit(int[] prices) {
         return maximumProfit(prices,0,1,1,new HashMap<String,Integer>());
